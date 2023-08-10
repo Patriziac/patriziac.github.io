@@ -30,6 +30,10 @@
   color: var(--color-dark);
 }
 
+#root{
+  width: 100%;
+}
+
 body{
   margin: 0 auto;
   padding: 0;
@@ -63,7 +67,7 @@ p{
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-dark: #222222;
+    --color-dark: #1a1a1a;
     --color-light: #FFFFFF;
     --color-red: #FF0000;
     --color-orange: #FF8700;

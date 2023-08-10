@@ -4,7 +4,10 @@ function App() {
 
   return (
     <>
-      <h1 className='borderline'>Patriziac</h1>
+      <div className='logo-container'>
+        <h1 className=''>Patriziac</h1>
+        <div className='scale-in-hor-center borderline'></div>
+      </div>
     </>
   )
 }
