@@ -1,0 +1,9 @@
+.intro-container {
+  text-transform: uppercase;
+  display: grid;
+  row-gap: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0 auto;
+  max-width: 16rem;
+}

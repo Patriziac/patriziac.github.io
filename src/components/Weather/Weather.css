@@ -1,0 +1,14 @@
+.weather {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.icon {
+  display: inline-block;
+  background-color: var(--color-dark);
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,19 @@
+.date {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.date span {
+  display: block;
+}
+
+.date__weekday {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+}
+
+.date__resume {
+  letter-spacing: 0.5rem;
+}
