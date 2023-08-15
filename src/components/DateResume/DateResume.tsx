@@ -1,7 +1,7 @@
-import './IntroDate.css'
+import './DateResume.css'
 
 
-export const IntroDate = () => {
+export const DateResume = () => {
   const event = new Date();
   const wd = event.toLocaleDateString('en-US', { weekday: 'long' });
   const localDate = event.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
