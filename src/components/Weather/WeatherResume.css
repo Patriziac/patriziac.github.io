@@ -4,11 +4,25 @@
   justify-content: space-between;
 }
 
-.icon {
-  display: inline-block;
-  background-color: var(--color-dark);
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  margin-right: 10px;
+.weather__info {
+  display: flex;
+  align-items: center;
+}
+
+.weather__icon {
+  color: var(--color-dark);
+  width: 25px;
+  height: 25px;
+}
+
+.weather__icon.pink {
+  color: var(--color-pink);
+}
+
+.weather__icon.blue {
+  color: var(--color-blue);
+}
+
+.weather__icon.purple {
+  color: var(--color-purple);
 }

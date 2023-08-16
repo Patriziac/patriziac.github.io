@@ -1,2 +1,2 @@
 export * from './WeatherEntity';
-export * from './TimeEntity';
+export * from './DateTimeEntity';

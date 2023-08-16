@@ -2,40 +2,44 @@ import { useEffect, useState } from 'react'
 import { DateResume } from '../DateResume/DateResume'
 import { TimeResume } from '../TimeResume/TimeResume'
 import { WeatherResume } from '../Weather/WeatherResume'
-import { Time } from '../../entities';
-import './Intro.css'
+import { DateTime } from '../../entities';
+import { formatDateToISO, formatDateToISOHour } from '../../utils';
+import './Intro.css';
 
 export const Intro = () => {
-  const [currentDate, setCurrentDate] = useState<Time | null>(null);
-  const [fullHour, setFullHour] = useState(false);
+  const [currentDateTime, setCurrentTime] = useState<DateTime | null>(null);
+  const aDate = new Date();
+  const [currentDate, setCurrentDate] = useState<string>(formatDateToISOHour(aDate));
 
-  const getCurrentTime = () => {
-    const currentDate = new Date();
+
+  const getCurrentDateTime = () => {
+    const nDate = new Date();
+
     const time = {
-      iso8601: currentDate.toISOString().substring(0, 19),
-      lcaleTimeString: currentDate.toLocaleTimeString('en-US')
-    } as Time;
+      localeTime: nDate.toLocaleTimeString('en-US'),
+      localeDate: nDate.toLocaleDateString('en-US'),
+      iso: formatDateToISO(nDate),
+      isoHour: formatDateToISOHour(nDate)
+    } as DateTime;
 
-    if (currentDate.getMinutes() === 0 && currentDate.getSeconds() === 0) {
-      setFullHour(true);
-    }
-    else {
-      setFullHour(false);
+    // if (nDate.getMinutes() === 0 && nDate.getSeconds() === 0) {
+    if (nDate.getSeconds() === 30) {
+      setCurrentDate(time.isoHour);
     }
 
-    setCurrentDate(time);
+    setCurrentTime(time);
   }
 
   useEffect(() => {
-    getCurrentTime();
-    setInterval(getCurrentTime, 1000);
+    getCurrentDateTime();
+    setInterval(getCurrentDateTime, 1000);
   }, []);
 
   return (
     <div className='intro-container'>
       <DateResume />
-      <TimeResume currentDate={currentDate} />
-      <WeatherResume refresh={fullHour} />
+      <TimeResume currentDateTime={currentDateTime} />
+      <WeatherResume currentDate={currentDate} />
     </div>
   )
 }

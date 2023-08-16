@@ -64,18 +64,6 @@ p {
     background-color: var(--color-light);
     color: var(--color-dark);
   }
-
-  .pink {
-    background-color: var(--color-pink);
-  }
-
-  .blue {
-    background-color: var(--color-blue);
-  }
-
-  .purple {
-    background-color: var(--color-purple);
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,17 +81,5 @@ p {
 
     background-color: var(--color-dark);
     color: var(--color-light);
-  }
-
-  .pink {
-    background-color: var(--color-pink);
-  }
-
-  .blue {
-    background-color: var(--color-blue);
-  }
-
-  .purple {
-    background-color: var(--color-purple);
   }
 }

@@ -1,17 +1,17 @@
 import { FC } from 'react';
 import './TimeResume.css'
-import { Time } from '../../entities';
+import { DateTime } from '../../entities';
 
 interface ITimeResume {
-  currentDate: Time | null;
+  currentDateTime: DateTime | null;
 }
 
-export const TimeResume: FC<ITimeResume> = ({ currentDate }) => {
+export const TimeResume: FC<ITimeResume> = ({ currentDateTime }) => {
 
   return (
     <div className='time'>
-      <span className='time-resume' data-isotime={currentDate?.iso8601}>
-        {currentDate ? currentDate.lcaleTimeString : ''}
+      <span className='time-resume'>
+        {currentDateTime ? currentDateTime.localeTime : ''}
       </span>
     </div>
   )
